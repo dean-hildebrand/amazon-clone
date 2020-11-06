@@ -1,15 +1,19 @@
 import React from "react";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import "../css/header.css";
 
 function Header() {
   return (
     <div className="header">
-      <img className="header__logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5eMxH-ypqXJtd3TDkzQHvIZdXTq5IrfFMMQ&usqp=CAU" />
+      <img
+        className="header__logo"
+        src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+      />
 
       <div className="header__search">
-        <input className="header_searchInput" type="text" />
-        <SearchIcon />
+        <input className="header__searchInput" type="text" />
+        <SearchIcon className="header__searchIcon" />
       </div>
 
       <div className="header__nav">
@@ -24,6 +28,11 @@ function Header() {
         <div className="header__option">
           <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
+        </div>
+
+        <div className="header__optionBasket">
+          <ShoppingBasketIcon />
+          <span className="header__optionLineTwo header__basketCount">0</span>
         </div>
       </div>
     </div>
