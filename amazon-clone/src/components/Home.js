@@ -1,5 +1,5 @@
 import React from "react";
-import Product from './Product'
+import Product from "./Product";
 import "../css/home.css";
 
 function Home() {
@@ -14,14 +14,7 @@ function Home() {
       </div>
 
       <div className="home__row">
-      <Product />
-
-      </div>
-      <div className="home__row">
-      <Product />
-      </div>
-      <div className="home__row">
-      <Product />
+        <Product />
       </div>
     </div>
   );
