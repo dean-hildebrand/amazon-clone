@@ -13,6 +13,7 @@ function Home() {
         />
         <div className="home__row">
           <Product
+            id={1}
             title={"The Lean Startup"}
             price={19.99}
             rating={5}
@@ -21,6 +22,7 @@ function Home() {
             }
           />
           <Product
+            id={2}
             title={"Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"}
             price={199.99}
             rating={3}
@@ -31,7 +33,10 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
-            title={"Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"}
+            id={3}
+            title={
+              "Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
+            }
             price={98.99}
             rating={4}
             image={
@@ -39,7 +44,10 @@ function Home() {
             }
           />
           <Product
-            title={"New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"}
+            id={4}
+            title={
+              "New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
+            }
             price={598.99}
             rating={4}
             image={
@@ -47,7 +55,10 @@ function Home() {
             }
           />
           <Product
-            title={"Fitbit Charge 4 Fitness and Activity Tracker with Built-in GPS, Heart Rate, Sleep & Swim Tracking, Black/Black, One Size (S &L Bands Included)"}
+            id={5}
+            title={
+              "Fitbit Charge 4 Fitness and Activity Tracker with Built-in GPS, Heart Rate, Sleep & Swim Tracking, Black/Black, One Size (S &L Bands Included)"
+            }
             price={149.99}
             rating={5}
             image={
@@ -57,8 +68,11 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
-            title={"Kenwood kMix Stand Mixer fro Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"}
-            price={239.00}
+            id={6}
+            title={
+              "Kenwood kMix Stand Mixer fro Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+            }
+            price={239.0}
             rating={4}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
