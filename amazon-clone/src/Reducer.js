@@ -22,7 +22,6 @@ const reducer = (state, action) => {
 
       if (index >= 0) {
         newBasket.splice(index, 1);
-
       } else {
         console.warn(
           `Cant remove product (id: ${action.id}) as it is not in the cart`
@@ -30,8 +29,8 @@ const reducer = (state, action) => {
       }
       return {
         ...state,
-        basket: newBasket
-      }
+        basket: newBasket,
+      };
 
     default:
       return state;
