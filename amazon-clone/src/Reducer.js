@@ -2,6 +2,12 @@ export const initialState = {
   basket: [],
 };
 
+// Selector
+//use reduce method to tally up the basket total price depending on the items in the basket
+export const getBasketTotal = (basket) =>
+// iterate the basket and set initial "amount"
+basket?.reduce((amount, item) => item.price + amount, 0);
+
 const reducer = (state, action) => {
   switch(action.type) {
     case "ADD_TO_BASKET":
