@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import "../css/login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
 
 function Login() {
+  // useHistory allows us to programatically change the url
+  // reroute on succesful register
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const signIn = (e) => {
     e.preventDefault();
     // firebase login user code
+    auth.signInWithEmailAndPassword(email, password)
+    .then(auth => {
+      history.push('/')
+    })
+    .catch(error => alert(error.message))
   };
 
   const register = (e) => {
@@ -17,7 +25,9 @@ function Login() {
     // firebase register user code
     auth.createUserWithEmailAndPassword(email, password)
     .then((auth) => {
-      console.log(auth);
+      if (auth) {
+        history.push('/')
+      }
     })
     .catch(error => alert(error.message))
   };
